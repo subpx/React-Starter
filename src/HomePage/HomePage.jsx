@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, NavLink } from "react-router-dom";
-import { connect } from "react-redux";
 import BookingPage from "../BookingPage";
 import Dashboard from "../DashboardPage";
 
@@ -64,14 +63,4 @@ class HomePage extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
-  const { users, authentication } = state;
-  const { user } = authentication;
-  return {
-    user,
-    users
-  };
-}
-
-const connectedHomePage = connect(mapStateToProps)(HomePage);
-export default connectedHomePage;
+export default HomePage;
